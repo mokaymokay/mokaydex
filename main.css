@@ -1,0 +1,101 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+  --red: #ED2331;
+  --black: #191715;
+}
+
+/* contain all the things */
+
+#pokedex {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+/* main body */
+
+#main-body {
+  width: 400px;
+  height: 520px;
+  border-radius: 20px;
+  background-color: var(--red);
+  position: absolute;
+  z-index: 1;
+  box-shadow: -2px 2px 1px #6C1017, inset -2px 2px 0px #FDEBEC;
+}
+
+#buttonGlass {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: -webkit-radial-gradient(#1EFFF3, #07BDFF, #0090FF);
+  position: absolute;
+  border: 3px solid #9EE5FF;
+  top: 15px;
+  left: 15px;
+}
+
+#redbuttonGlass {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: -webkit-radial-gradient(#FF3277, #FF568E);
+  position: absolute;
+  top: 16.5px;
+  left: 95px;
+  border: 1.5px solid #FFC7D9;
+}
+
+#yellowbuttonGlass {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: -webkit-radial-gradient(#FFC826, #FFD968);
+  position: absolute;
+  top: 16.5px;
+  left: 121px;
+  border: 1.5px solid #FFF1C9;
+}
+
+#greenbuttonGlass {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: -webkit-radial-gradient(#2CFF19, #BDFF23);
+  position: absolute;
+  top: 16.5px;
+  left: 147px;
+  border: 1.5px solid #E1FF9B;
+}
+
+/* separator */
+
+#separator {
+  width: 16px;
+  height: 300px;
+  border-radius: 1px;
+  background: -webkit-linear-gradient(left, #332E2A 0%, var(--black) 100%);
+  box-shadow: -1px 1px 2px #6C1017;
+  position: absolute;
+  left: 390px;
+  top: 145px;
+  z-index: 3;
+}
+
+/* inside flap */
+
+#inside-flap {
+  width: 400px;
+  height: 450px;
+  border-radius: 20px;
+  background-color: var(--red);
+  position: absolute;
+  left: 398px;
+  top: 71px;
+  z-index: 1;
+  box-shadow: 0 2px 1px #6C1017, inset -2px 2px 0px #FDEBEC;
+}
