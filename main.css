@@ -3,6 +3,23 @@
 	padding: 0;
 }
 
+body {
+  font-size: 10px;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  font-family: "pokemon-font", "Courier New", Courier, monospace;
+	text-transform: capitalize;
+}
+
+h1 {
+  font-size: 20px;
+	color: #666;
+}
+
+h3 {
+	color: #FFF;
+}
+
 :root {
   --red: #ED2331;
   --black: #191715;
@@ -103,6 +120,7 @@
 	top: 400px;
 	left: 40px;
 	box-shadow: inset 1px 1px 10px #555, inset -1px -1px 10px #555; /* engraved effect*/
+	padding: 10px;
 }
 
 #left-arrow {
@@ -160,6 +178,7 @@
 	top: 50px;
 	left: 40px;
 	box-shadow: inset 1px 1px 10px #555, inset -1px -1px 10px #555; /* engraved effect*/
+	padding: 10px;
 }
 
 #stats-button {
