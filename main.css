@@ -28,7 +28,7 @@
   box-shadow: -2px 2px 1px #6C1017, inset -2px 2px 0px #FDEBEC;
 }
 
-#buttonGlass {
+#big-blue-button {
   width: 52px;
   height: 52px;
   border-radius: 50%;
@@ -39,7 +39,7 @@
   left: 15px;
 }
 
-#redbuttonGlass {
+#mini-red-button {
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -50,7 +50,7 @@
   border: 1.5px solid #FFC7D9;
 }
 
-#yellowbuttonGlass {
+#mini-yellow-button {
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -61,7 +61,7 @@
   border: 1.5px solid #FFF1C9;
 }
 
-#greenbuttonGlass {
+#mini-green-button {
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -72,7 +72,7 @@
   border: 1.5px solid #E1FF9B;
 }
 
-#screen-container {
+#image-display-container {
   width: 360px;
   height: 260px;
   border-radius: 20px;
@@ -83,7 +83,7 @@
   box-shadow: -2px 2px 1px #666, 2px -2px 0px #EEE;
 }
 
-#screen {
+#image-display {
   width: 320px;
   height: 220px;
   border-radius: 5px;
@@ -92,6 +92,35 @@
   top: 20px;
   left: 20px;
   box-shadow: inset 1px 1px 10px #555, inset -1px -1px 10px #555; /* engraved effect*/
+}
+
+#name-display {
+	width: 160px;
+	height: 70px;
+	border-radius: 5px;
+	background-color: #FFF;
+	position: absolute;
+	top: 400px;
+	left: 40px;
+	box-shadow: inset 1px 1px 10px #555, inset -1px -1px 10px #555; /* engraved effect*/
+}
+
+#left-arrow {
+	border-top: 35px solid transparent;
+	border-right: 35px solid #222;
+	border-bottom: 35px solid transparent;
+	position: absolute;
+	top: 400px;
+	left: 250px;
+}
+
+#right-arrow {
+	border-top: 35px solid transparent;
+	border-left: 35px solid #222;
+	border-bottom: 35px solid transparent;
+	position: absolute;
+	top: 400px;
+	left: 320px;
 }
 
 /* separator */
@@ -120,4 +149,26 @@
   left: 398px;
   z-index: 1;
   box-shadow: 0 2px 1px #6C1017, inset -2px 2px 0px #FDEBEC;
+}
+
+#info-display {
+	width: 320px;
+  height: 220px;
+	border-radius: 5px;
+	background-color: #497033;
+	position: absolute;
+	top: 50px;
+	left: 40px;
+	box-shadow: inset 1px 1px 10px #555, inset -1px -1px 10px #555; /* engraved effect*/
+}
+
+#stats-button {
+	width: 120px;
+	height: 50px;
+	border-radius: 5px;
+	background-color: #FFD968;
+	position: absolute;
+	top: 360px;
+	left: 240px;
+	box-shadow: -2px 2px 1px #666, 2px -2px 0px #EEE;
 }
