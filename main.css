@@ -5,19 +5,23 @@
 
 body {
   font-size: 10px;
-  font-smooth: never;
   -webkit-font-smoothing: none;
   font-family: "pokemon-font", "Courier New", Courier, monospace;
 	text-transform: capitalize;
 }
 
 h1 {
-  font-size: 20px;
+	font-size: 20px;
+}
+
+h2 {
+  font-size: 15px;
 	color: #666;
 }
 
 h3 {
 	color: #FFF;
+	display: hide;
 }
 
 :root {
@@ -112,15 +116,15 @@ h3 {
 }
 
 #name-display {
-	width: 160px;
-	height: 70px;
+	width: 140px;
+	height: 50px;
 	border-radius: 5px;
 	background-color: #FFF;
 	position: absolute;
 	top: 400px;
 	left: 40px;
 	box-shadow: inset 1px 1px 10px #555, inset -1px -1px 10px #555; /* engraved effect*/
-	padding: 10px;
+	padding: 15px 15px;
 }
 
 #left-arrow {
@@ -183,11 +187,14 @@ h3 {
 
 #stats-button {
 	width: 120px;
-	height: 50px;
+	height: 34px;
 	border-radius: 5px;
 	background-color: #FFD968;
 	position: absolute;
 	top: 360px;
 	left: 240px;
 	box-shadow: -2px 2px 1px #666, 2px -2px 0px #EEE;
+	text-align: center;
+	color: #FFF;
+	padding: 8px 0px;
 }

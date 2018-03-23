@@ -1,12 +1,12 @@
-// const POKEMON_URL = "https://pokeapi.co/api/v2/pokemon";
-const POKEMON_URL = "http://pokeapi.salestock.net/api/v2/pokemon";
+const POKEMON_URL = "https://pokeapi.co/api/v2/pokemon";
+// const POKEMON_URL = "http://pokeapi.salestock.net/api/v2/pokemon";
 
 $(document).ready(function () {
   $.ajax({
     url: POKEMON_URL + "/131",
     type: "GET",
     success: function(data) {
-      let $pokeNameId = $(`<h1>${data.name}</h1><h1>no: ${data.id}</h1>`);
+      let $pokeNameId = $(`<h2>${data.name}</h2><h2>no: ${data.id}</h2>`);
       $("#name-display").append($pokeNameId);
       let $defense = $(`<h3>${data.stats[3].stat.name}: ${data.stats[3].base_stat}</h3>`);
       let $attack = $(`<h3>${data.stats[4].stat.name}: ${data.stats[4].base_stat}</h3>`)
@@ -22,6 +22,5 @@ $(document).ready(function () {
       alert("404 not found: lapras");
     }
   })
-
 
 });
