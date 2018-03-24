@@ -19,16 +19,17 @@ class Trainer {
 }
 
 class Pokemon {
-  constructor(id, name, defense, attack, hp) {
+  constructor(id, name, defense, attack, hp, abilities) {
     this.id = id;
     this.name = name;
     this.defense = defense;
     this.attack = attack;
     this.hp = hp;
+    this.abilities = abilities;
   }
 }
 
-function setAttributes(id) {
+function createPokemon(id) {
   $.ajax({
     url: POKEMON_URL + id,
     dataType: 'json',
@@ -39,7 +40,15 @@ function setAttributes(id) {
       defenseStat = data.stats[3].base_stat;
       attackStat = data.stats[4].base_stat;
       hpStat = data.stats[5].base_stat;
-      let myPokemon = new Pokemon(id, name, defenseStat, attackStat, hpStat);
+      let sortAbilities = function() {
+        let abilities = [];
+        for (var i = 0; i < data.abilities.length; i++) {
+          abilities.push(data.abilities[i].ability.name);
+        }
+        return abilities;
+      }
+      abilities = sortAbilities();
+      let myPokemon = new Pokemon(id, name, defenseStat, attackStat, hpStat, abilities);
       newTrainer.pokedex.push(myPokemon);
     },
     error: function() {
@@ -49,9 +58,10 @@ function setAttributes(id) {
 }
 
 let newTrainer = new Trainer("mokaymon");
-setAttributes(130); // gyarados
-setAttributes(131); // lapras
-setAttributes(143); // snorlax
+let squad = [130, 131, 143];
+for (var i = 0; i < squad.length; i++) {
+  createPokemon(squad[i]);
+}
 
 // let $pokeNameId = $(`<h2>${data.name}</h2><h2>no: ${data.id}</h2>`);
 // $("#name-display").append($pokeNameId);
