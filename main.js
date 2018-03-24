@@ -1,16 +1,22 @@
 const POKEMON_URL = "https://pokeapi.co/api/v2/pokemon/";
 // const POKEMON_URL = "http://pokeapi.salestock.net/api/v2/pokemon"; // backup url
 
-const MOKAYMON = []; // array of pokemon objects
-
-const MOKAYDEX = {
-  all : function() {
-    return MOKAYMON;
-  },
-  get : function(name) {
-
+class Trainer {
+  constructor(name) {
+    this.name = name;
+    this.pokedex = [];
   }
-};
+
+  all() {
+    return this.pokedex;
+  }
+
+  get(pokemon) { // pass in pokemon name as a string
+    for (var i = 0; i < this.pokedex.length; i++) {
+      if (this.pokedex[i].name === pokemon) { return this.pokedex[i] }
+    }
+  }
+}
 
 class Pokemon {
   constructor(id, name, defense, attack, hp) {
@@ -34,7 +40,7 @@ function setAttributes(id) {
       attackStat = data.stats[4].base_stat;
       hpStat = data.stats[5].base_stat;
       let myPokemon = new Pokemon(id, name, defenseStat, attackStat, hpStat);
-      MOKAYMON.push(myPokemon);
+      newTrainer.pokedex.push(myPokemon);
     },
     error: function() {
       alert("404 not found");
@@ -42,6 +48,7 @@ function setAttributes(id) {
   })
 }
 
+let newTrainer = new Trainer("mokaymon");
 setAttributes(130); // gyarados
 setAttributes(131); // lapras
 setAttributes(143); // snorlax
