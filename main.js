@@ -19,12 +19,12 @@ class Trainer {
 
   show(i) {
     let $pokeNameId = $(`<h2>${this.pokedex[i].name}</h2><h2>no: ${this.pokedex[i].id}</h2>`);
-    $("#name-display").html($pokeNameId);
+    $( "#name-display" ).html($pokeNameId);
     let $baseStats = $(`<h3>HP: ${this.pokedex[i].hp}</h3><h3>attack: ${this.pokedex[i].attack}</h3><h3>defense: ${this.pokedex[i].defense}</h3>`);
-    $("#base-stats").html($baseStats);
-    $("#abilities").html("</br><h3>abilities:</h3>" + `<h3>${this.pokedex[i].abilities.join(", ")}</h3>`);
+    $( "#base-stats" ).html($baseStats);
+    $( "#abilities" ).html("</br><h3>abilities:</h3>" + `<h3>${this.pokedex[i].abilities.join(", ")}</h3>`);
     let $image = $(`<img class="pokemon-image" src="${this.pokedex[i].image}" alt="${this.pokedex[i].name}">`);
-    $("#image-display").html($image);
+    $ ("#image-display" ).html($image);
 
     $( "#right-arrow" ).click(function(e) {
       i === newTrainer.pokedex.length - 1 ? i = 0 : i++;
@@ -84,3 +84,11 @@ createPokemon(130).done(function() {
 })
 
 createPokemon(131).done(createPokemon(143));
+
+$( "#stats-button" ).click(function(){
+  if ($( "#hide-yo-stats" ).css('display') == 'none') {
+    $( "#hide-yo-stats" ).slideDown(800);
+  } else {
+    $( "#hide-yo-stats" ).hide();
+  }
+});

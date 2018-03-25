@@ -21,7 +21,6 @@ h2 {
 
 h3 {
 	color: #FFF;
-	display: hide;
 }
 
 :root {
@@ -192,6 +191,10 @@ h3 {
 	left: 40px;
 	box-shadow: inset 1px 1px 10px #555, inset -1px -1px 10px #555; /* engraved effect*/
 	padding: 10px;
+}
+
+#hide-yo-stats {
+	display: none;
 }
 
 #stats-button {
