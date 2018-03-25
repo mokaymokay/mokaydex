@@ -17,28 +17,31 @@ class Trainer {
     }
   }
 
-  show() {
-    let $pokeNameId = $(`<h2>${this.pokedex[0].name}</h2><h2>no: ${this.pokedex[0].id}</h2>`);
+  show(i = 0) {
+    let $pokeNameId = $(`<h2>${this.pokedex[i].name}</h2><h2>no: ${this.pokedex[i].id}</h2>`);
     $("#name-display").append($pokeNameId);
-    let $defense = $(`<h3>defense: ${this.pokedex[0].defense}</h3>`);
-    let $attack = $(`<h3>attack: ${this.pokedex[0].attack}</h3>`)
-    let $hp = $(`<h3>HP: ${this.pokedex[0].hp}</h3>`)
+    let $defense = $(`<h3>defense: ${this.pokedex[i].defense}</h3>`);
+    let $attack = $(`<h3>attack: ${this.pokedex[i].attack}</h3>`)
+    let $hp = $(`<h3>HP: ${this.pokedex[i].hp}</h3>`)
     $("#info-display").append($hp).append($attack).append($defense);
     $("#info-display").append("</br><h3>abilities:</h3>");
-    for (var i = 0; i < this.pokedex[0].abilities.length; i++) {
-      $("#info-display").append(`<h3>${this.pokedex[0].abilities[i]}</h3>`);
+    for (var a = 0; a < this.pokedex[i].abilities.length; a++) {
+      $("#info-display").append(`<h3>${this.pokedex[i].abilities[a]}</h3>`);
     }
+    let $image = $(`<img class="pokemon-image" src="${this.pokedex[i].image}" alt="${this.pokedex[i].name}">`);
+    $("#image-display").append($image);
   }
 }
 
 class Pokemon {
-  constructor(id, name, defense, attack, hp, abilities) {
+  constructor(id, name, defense, attack, hp, abilities, image) {
     this.id = id;
     this.name = name;
     this.defense = defense;
     this.attack = attack;
     this.hp = hp;
     this.abilities = abilities;
+    this.image = image;
   }
 }
 
@@ -61,7 +64,8 @@ function createPokemon(id) {
         return abilities;
       }
       abilities = sortAbilities();
-      let myPokemon = new Pokemon(id, name, defenseStat, attackStat, hpStat, abilities);
+      image = data.sprites.front_default;
+      let myPokemon = new Pokemon(id, name, defenseStat, attackStat, hpStat, abilities, image);
       newTrainer.pokedex.push(myPokemon);
   }).fail(function() {
       alert("404 not found");
