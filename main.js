@@ -17,19 +17,24 @@ class Trainer {
     }
   }
 
-  show(i = 0) {
+  show(i) {
     let $pokeNameId = $(`<h2>${this.pokedex[i].name}</h2><h2>no: ${this.pokedex[i].id}</h2>`);
-    $("#name-display").append($pokeNameId);
-    let $defense = $(`<h3>defense: ${this.pokedex[i].defense}</h3>`);
-    let $attack = $(`<h3>attack: ${this.pokedex[i].attack}</h3>`)
-    let $hp = $(`<h3>HP: ${this.pokedex[i].hp}</h3>`)
-    $("#info-display").append($hp).append($attack).append($defense);
-    $("#info-display").append("</br><h3>abilities:</h3>");
-    for (var a = 0; a < this.pokedex[i].abilities.length; a++) {
-      $("#info-display").append(`<h3>${this.pokedex[i].abilities[a]}</h3>`);
-    }
+    $("#name-display").html($pokeNameId);
+    let $baseStats = $(`<h3>HP: ${this.pokedex[i].hp}</h3><h3>attack: ${this.pokedex[i].attack}</h3><h3>defense: ${this.pokedex[i].defense}</h3>`);
+    $("#base-stats").html($baseStats);
+    $("#abilities").html("</br><h3>abilities:</h3>" + `<h3>${this.pokedex[i].abilities.join(", ")}</h3>`);
     let $image = $(`<img class="pokemon-image" src="${this.pokedex[i].image}" alt="${this.pokedex[i].name}">`);
-    $("#image-display").append($image);
+    $("#image-display").html($image);
+
+    $( "#right-arrow" ).click(function() {
+      i++;
+      newTrainer.show(i);
+    });
+
+    $( "#left-arrow" ).click(function() {
+      i--;
+      newTrainer.show(i);
+    });
   }
 }
 
@@ -74,11 +79,7 @@ function createPokemon(id) {
 
 let newTrainer = new Trainer("mokaymon");
 createPokemon(130).done(function() {
-  newTrainer.show();
+  newTrainer.show(0); // pass in 0 by default to show first pokemon
 })
 
 createPokemon(131).done(createPokemon(143));
-
-  // $( "#name-display" ).click(function() {
-  //   newTrainer.show();
-  // });
