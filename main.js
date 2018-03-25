@@ -26,13 +26,13 @@ class Trainer {
     let $image = $(`<img class="pokemon-image" src="${this.pokedex[i].image}" alt="${this.pokedex[i].name}">`);
     $("#image-display").html($image);
 
-    $( "#right-arrow" ).click(function() {
-      i++;
+    $( "#right-arrow" ).click(function(e) {
+      i === newTrainer.pokedex.length - 1 ? i = 0 : i++;
       newTrainer.show(i);
     });
 
     $( "#left-arrow" ).click(function() {
-      i--;
+      i === 0 ? i = newTrainer.pokedex.length - 1 : i--;
       newTrainer.show(i);
     });
   }
@@ -61,6 +61,7 @@ function createPokemon(id) {
       defenseStat = data.stats[3].base_stat;
       attackStat = data.stats[4].base_stat;
       hpStat = data.stats[5].base_stat;
+      // TODO: refactor grabbing abilities array
       let sortAbilities = function() {
         let abilities = [];
         for (var i = 0; i < data.abilities.length; i++) {
