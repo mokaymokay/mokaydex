@@ -79,11 +79,13 @@ function createPokemon(id) {
 }
 
 let newTrainer = new Trainer("mokaymon");
-createPokemon(130).done(function() {
+$.when(
+  createPokemon(130),
+  createPokemon(131),
+  createPokemon(143)
+).done(function() {
   newTrainer.show(0); // pass in 0 by default to show first pokemon
-})
-
-createPokemon(131).done(createPokemon(143));
+});
 
 $( "#stats-button" ).click(function(){
   if ($( "#hide-yo-stats" ).css('display') == 'none') {
