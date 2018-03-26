@@ -47,15 +47,15 @@ class Trainer {
 }
 
 class Pokemon {
-  constructor(id, name, defense, attack, hp, abilities, image, type) {
+  constructor(id, name, defense, attack, hp, abilities, type, image) {
     this.id = id;
     this.name = name;
     this.defense = defense;
     this.attack = attack;
     this.hp = hp;
     this.abilities = abilities;
-    this.image = image;
     this.type = type;
+    this.image = image;
   }
 }
 
@@ -66,30 +66,14 @@ function createPokemon(id) {
     type: "GET",
   }).done(function(data) {
       console.log("success!");
-      name = data.name;
-      defenseStat = data.stats[3].base_stat;
-      attackStat = data.stats[4].base_stat;
-      hpStat = data.stats[5].base_stat;
-      // TODO: refactor grabbing abilities array
-      let sortAbilities = function() {
-        let abilities = [];
-        for (var i = 0; i < data.abilities.length; i++) {
-          abilities.push(data.abilities[i].ability.name);
-        }
-        return abilities;
-      }
-      abilities = sortAbilities();
-      image = data.sprites.front_default;
-      // TODO: refactor grabbing types array
-      let sortTypes = function() {
-        let types = [];
-        for (var i = 0; i < data.types.length; i++) {
-          types.push(data.types[i].type.name);
-        }
-        return types;
-      }
-      types = sortTypes();
-      let myPokemon = new Pokemon(id, name, defenseStat, attackStat, hpStat, abilities, image, types);
+      let name = data.name;
+      let defenseStat = data.stats[3].base_stat;
+      let attackStat = data.stats[4].base_stat;
+      let hpStat = data.stats[5].base_stat;
+      let abilities = data.abilities.map(x => x.ability.name);
+      let type = data.types.map(x => x.type.name);
+      let image = data.sprites.front_default;
+      let myPokemon = new Pokemon(id, name, defenseStat, attackStat, hpStat, abilities, type, image);
       newTrainer.pokedex.push(myPokemon);
   }).fail(function() {
       alert("404 not found");
