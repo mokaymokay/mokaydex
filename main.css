@@ -20,12 +20,18 @@ h2 {
 }
 
 h3 {
-	color: #FFF;
+	color: var(--black);
 }
 
 :root {
   --red: #ED2331;
   --black: #191715;
+	--yellow: #FFD24C;
+	--lightyellow: #FFD968;
+	--water: #6890F0;
+	--flying: #A890F0;
+	--ice: #98D8D8;
+	--normal: #A8A878;
 }
 
 /* contain all the things */
@@ -74,7 +80,7 @@ h3 {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: -webkit-radial-gradient(#FFC826, #FFD968);
+  background: -webkit-radial-gradient(var(--yellow), var(--lightyellow));
   position: absolute;
   top: 16.5px;
   left: 121px;
@@ -107,7 +113,7 @@ h3 {
   width: 320px;
   height: 220px;
   border-radius: 5px;
-  background-color: #FFF;
+  background: #FFF;
   position: absolute;
   top: 20px;
   left: 20px;
@@ -185,7 +191,7 @@ h3 {
 	width: 320px;
   height: 220px;
 	border-radius: 5px;
-	background-color: #497033;
+	background-color: #EEE;
 	position: absolute;
 	top: 50px;
 	left: 40px;
@@ -201,7 +207,7 @@ h3 {
 	width: 120px;
 	height: 34px;
 	border-radius: 5px;
-	background-color: #FFD968;
+	background-color: var(--lightyellow);
 	position: absolute;
 	top: 360px;
 	left: 240px;
@@ -212,11 +218,11 @@ h3 {
 }
 
 #stats-button:hover {
-	background-color: #FFD24C;
+	background-color: var(--yellow);
 }
 
 #stats-button:active {
-  background-color: #FFD24C;
+  background-color: var(--yellow);
 	box-shadow: -2px 2px 1px #444, 2px -2px 0px #EEE;
   transform: translateY(2px);
 }

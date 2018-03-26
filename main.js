@@ -25,6 +25,7 @@ class Trainer {
     $( "#abilities" ).html("</br><h3>abilities:</h3>" + `<h3>${this.pokedex[i].abilities.join(", ")}</h3>`);
     let $image = $(`<img class="pokemon-image" src="${this.pokedex[i].image}" alt="${this.pokedex[i].name}">`);
     $ ("#image-display" ).html($image);
+    $( "#types" ).html("</br><h3>type:</h3>" + `<h3>${this.pokedex[i].type.join(", ")}</h3>`);
 
     $( "#right-arrow" ).click(function(e) {
       i === newTrainer.pokedex.length - 1 ? i = 0 : i++;
@@ -35,11 +36,18 @@ class Trainer {
       i === 0 ? i = newTrainer.pokedex.length - 1 : i--;
       newTrainer.show(i);
     });
+
+    if (this.pokedex[i].type.length === 2) {
+      $( "#image-display" ).css("background", `linear-gradient(90deg, var(--${this.pokedex[i].type[0]}) 50%, var(--${this.pokedex[i].type[1]}) 50%)`);
+    } else {
+      $( "#image-display" ).css("background", `var(--${this.pokedex[i].type[0]})`);
+    }
+
   }
 }
 
 class Pokemon {
-  constructor(id, name, defense, attack, hp, abilities, image) {
+  constructor(id, name, defense, attack, hp, abilities, image, type) {
     this.id = id;
     this.name = name;
     this.defense = defense;
@@ -47,6 +55,7 @@ class Pokemon {
     this.hp = hp;
     this.abilities = abilities;
     this.image = image;
+    this.type = type;
   }
 }
 
@@ -71,7 +80,16 @@ function createPokemon(id) {
       }
       abilities = sortAbilities();
       image = data.sprites.front_default;
-      let myPokemon = new Pokemon(id, name, defenseStat, attackStat, hpStat, abilities, image);
+      // TODO: refactor grabbing types array
+      let sortTypes = function() {
+        let types = [];
+        for (var i = 0; i < data.types.length; i++) {
+          types.push(data.types[i].type.name);
+        }
+        return types;
+      }
+      types = sortTypes();
+      let myPokemon = new Pokemon(id, name, defenseStat, attackStat, hpStat, abilities, image, types);
       newTrainer.pokedex.push(myPokemon);
   }).fail(function() {
       alert("404 not found");
