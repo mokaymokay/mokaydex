@@ -210,3 +210,13 @@ h3 {
 	color: #FFF;
 	padding: 8px 0px;
 }
+
+#stats-button:hover {
+	background-color: #FFD24C;
+}
+
+#stats-button:active {
+  background-color: #FFD24C;
+	box-shadow: -2px 2px 1px #444, 2px -2px 0px #EEE;
+  transform: translateY(2px);
+}
