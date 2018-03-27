@@ -199,6 +199,12 @@ h3 {
 	padding: 10px;
 }
 
+.stat-bar {
+	height: 10px;
+	background-color: #555;
+	margin: 2px 0px;
+}
+
 #hide-yo-stats {
 	display: none;
 }
