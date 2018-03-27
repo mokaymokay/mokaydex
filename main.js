@@ -25,16 +25,18 @@ class Trainer {
     $( "#abilities" ).html("</br><h3>abilities:</h3>" + `<h3>${this.pokedex[i].abilities.join(", ")}</h3>`);
     let $image = $(`<img class="pokemon-image" src="${this.pokedex[i].image}" alt="${this.pokedex[i].name}">`);
     $ ("#image-display" ).html($image);
-    $( "#types" ).html("</br><h3>type:</h3>" + `<h3>${this.pokedex[i].type.join(", ")}</h3>`);
+    $( "#types" ).html("</br><h3>type:</h3>" + `<h3>${this.pokedex[i].type.join("/")}</h3>`);
+
+    let self = this;
 
     $( "#right-arrow" ).click(function(e) {
-      i === newTrainer.pokedex.length - 1 ? i = 0 : i++;
-      newTrainer.show(i);
+      i === self.pokedex.length - 1 ? i = 0 : i++;
+      self.show(i);
     });
 
     $( "#left-arrow" ).click(function() {
-      i === 0 ? i = newTrainer.pokedex.length - 1 : i--;
-      newTrainer.show(i);
+      i === 0 ? i = self.pokedex.length - 1 : i--;
+      self.show(i);
     });
 
     if (this.pokedex[i].type.length === 2) {
