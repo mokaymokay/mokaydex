@@ -119,6 +119,15 @@ h3 {
   position: absolute;
 }
 
+#image-preloader {
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
 #image-display-container {
   width: 360px;
   height: 260px;

@@ -89,6 +89,7 @@ $.when(createPokemon(130)
   ).done(
     createPokemon(143)
   ).done(function() {
+    $("#image-preloader").hide()
     newTrainer.show(0); // pass in 0 by default to show first pokemon
 });
 

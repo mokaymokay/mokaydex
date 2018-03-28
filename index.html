@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="node_modules/pokemon-font-master/css/pokemon-font.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title>mokaymon's pokedex</title>
   </head>
@@ -16,6 +17,17 @@
         <div id="mini-green-light"></div>
         <div id="image-display-container">
           <div id="image-display">
+          </div>
+          <div id="image-preloader" class="preloader-wrapper active">
+            <div class="spinner-layer spinner-red-only">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
           </div>
         </div>
         <div id="name-display"></div>
@@ -42,6 +54,7 @@
 
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script src="main.js" charset="utf-8"></script>
   </body>
 </html>

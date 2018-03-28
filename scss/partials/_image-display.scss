@@ -5,6 +5,10 @@ $container-width: 360px;
 $container-height: 260px;
 $image-size: 96px;
 
+#image-preloader {
+  @include center;
+}
+
 #image-display-container {
   width: $container-width;
   height: $container-height;
@@ -31,5 +35,4 @@ $image-size: 96px;
   width: $image-size;
   height: $image-size;
   @include center;
-  position: absolute;
 }
