@@ -1,0 +1,11 @@
+@mixin engraved-effect {
+  box-shadow: inset 1px 1px 10px $ashgray, inset -1px -1px 10px $ashgray;
+}
+
+@mixin center {
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}

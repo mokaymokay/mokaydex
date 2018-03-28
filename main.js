@@ -1,5 +1,5 @@
 const POKEMON_URL = "https://pokeapi.co/api/v2/pokemon/";
-// const POKEMON_URL = "http://pokeapi.salestock.net/api/v2/pokemon"; // backup url
+// const POKEMON_URL = "http://pokeapi.salestock.net/api/v2/pokemon/"; // backup url
 
 class Trainer {
   constructor(name) {
@@ -84,10 +84,10 @@ function createPokemon(id) {
 
 let newTrainer = new Trainer("mokaymon");
 $.when(createPokemon(130)
-  ).done(
-    createPokemon(131)
-  ).done(
-    createPokemon(143)
+  // ).done(
+  //   createPokemon(131)
+  // ).done(
+  //   createPokemon(143)
   ).done(function() {
     newTrainer.show(0); // pass in 0 by default to show first pokemon
 });
