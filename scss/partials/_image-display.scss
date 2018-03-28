@@ -1,0 +1,35 @@
+@import "colors";
+@import "mixins";
+
+$container-width: 360px;
+$container-height: 260px;
+$image-size: 96px;
+
+#image-display-container {
+  width: $container-width;
+  height: $container-height;
+  border-radius: $round-border;
+  background-color: $gray;
+  top: 91px;
+  left: 20px;
+  box-shadow: -2px 2px 1px $ashgray, 2px -2px 0px lighten($ashgray, 50%);
+  position: absolute;
+}
+
+#image-display {
+  width: $container-width - 40;
+  height: $container-height - 40;
+  border-radius: $round-border / 4;
+  background: $white;
+  top: 20px;
+  left: 20px;
+  @include engraved-effect;
+  position: absolute;
+}
+
+.pokemon-image {
+  width: $image-size;
+  height: $image-size;
+  @include center;
+  position: absolute;
+}

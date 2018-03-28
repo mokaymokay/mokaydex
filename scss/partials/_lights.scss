@@ -1,0 +1,55 @@
+@import "colors";
+
+$circle: 50%;
+$lights-position: 15px;
+$mini-light-size: 16px;
+
+%mini-light {
+  width: $mini-light-size;
+  height: $mini-light-size;
+  border-width: 1.5px;
+  border-radius: $circle;
+  border-style: solid;
+  top: $lights-position + 1.5;
+  position: absolute;
+}
+
+#big-blue-light {
+  @extend %mini-light;
+  width: $mini-light-size * 3.25;
+  height: $mini-light-size * 3.25;;
+  border-width: 3px;
+  top: $lights-position;
+  left: $lights-position;
+  background: -webkit-radial-gradient(#1EFFF3, #07BDFF, #0090FF);
+  background: radial-gradient(#1EFFF3, #07BDFF, #0090FF);
+  border-color: #9EE5FF;
+  position: absolute;
+}
+
+#mini-red-light {
+  @extend %mini-light;
+  left: $lights-position + 80;
+  background: -webkit-radial-gradient($hotpink, lighten($hotpink, 7%));
+  background: radial-gradient($hotpink, lighten($hotpink, 7%));
+  border-color: lighten($hotpink, 35%);
+  position: absolute;
+}
+
+#mini-yellow-light {
+  @extend %mini-light;
+  left: $lights-position + 106;
+  background: -webkit-radial-gradient($yellow, $lightyellow);
+  background: radial-gradient($yellow, $lightyellow);
+  border-color: lighten($yellow, 30%);
+  position: absolute;
+}
+
+#mini-green-light {
+  @extend %mini-light;
+  background: -webkit-radial-gradient($brightgreen, lighten($brightgreen, 7%));
+  background: radial-gradient($brightgreen, lighten($brightgreen, 7%));
+  left: $lights-position + 131;
+  border-color: lighten($brightgreen, 35%);
+  position: absolute;
+}

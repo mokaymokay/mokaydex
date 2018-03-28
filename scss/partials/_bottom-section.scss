@@ -1,0 +1,61 @@
+@import "colors";
+
+$bottom-left: 400px;
+$bottom-right: 360px;
+
+#name-display {
+	width: 140px;
+	height: 50px;
+	border-radius: $round-border / 4;;
+	background-color: $white;
+  top: $bottom-left;
+	left: 40px;
+	padding: 15px 15px;
+  @include engraved-effect;
+  position: absolute;
+}
+
+%arrow {
+  border-top: 35px solid transparent;
+  border-bottom: 35px solid transparent;
+  position: absolute;
+}
+
+#left-arrow {
+  @extend %arrow;
+  border-right: 35px solid $jetblack;
+	top: $bottom-left;
+	left: 250px;
+}
+
+#right-arrow {
+  @extend %arrow;
+  border-left: 35px solid $jetblack;
+	top: $bottom-left;
+  left: 320px;
+}
+
+%button {
+  width: 120px;
+  height: 34px;
+  box-shadow: -2px 2px 1px $ashgray, 2px -2px 0px $lightgray;
+  color: $white;
+  text-align: center;
+  padding: 8px 0px;
+  position: absolute;
+}
+
+#stats-button {
+  @extend %button;
+  border-radius: $round-border / 4;
+  top: $bottom-right;
+  left: 240px;
+  background-color: $lightyellow;
+  &:hover {
+    background-color: $yellow;
+  }
+  &:active {
+    background-color: $yellow;
+    transform: translateY(2px);
+  }
+}

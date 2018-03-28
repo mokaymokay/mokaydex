@@ -5,30 +5,11 @@
   --normal: #A8A878;
 }
 
-h1 {
-  -webkit-font-smoothing: none;
-  font-family: "pokemon-font", "Courier New", Courier, monospace;
-  text-transform: capitalize;
-  position: relative;
-  font-size: 20px;
-}
-
-h2 {
-  -webkit-font-smoothing: none;
-  font-family: "pokemon-font", "Courier New", Courier, monospace;
-  text-transform: capitalize;
-  position: relative;
-  font-size: 15px;
-  color: #666;
-}
-
-h3 {
-  -webkit-font-smoothing: none;
-  font-family: "pokemon-font", "Courier New", Courier, monospace;
-  text-transform: capitalize;
-  position: relative;
-  font-size: 10px;
-  color: #191715;
+:root {
+  --water: #6890F0;
+  --flying: #A890F0;
+  --ice: #98D8D8;
+  --normal: #A8A878;
 }
 
 * {
@@ -52,6 +33,66 @@ h3 {
   position: absolute;
 }
 
+#separator {
+  width: 10px;
+  height: 300px;
+  border-radius: 1px;
+  background: -webkit-linear-gradient(left, #e41321 0%, #b50f1a 50%, #e41321 100%);
+  box-shadow: -1px 1px 0px #cc111e;
+  left: 393px;
+  top: 145px;
+  z-index: 3;
+  position: absolute;
+}
+
+#inside-flap {
+  width: 400px;
+  height: 450px;
+  border-radius: 20px;
+  background-color: #ED2331;
+  top: 71px;
+  left: 398px;
+  z-index: 1;
+  box-shadow: 0px 2px 1px #6e0910, inset -2px 2px 0px #f9b0b5;
+  position: absolute;
+}
+
+h1 {
+  -webkit-font-smoothing: none;
+  font-family: "pokemon-font", "Courier New", Courier, monospace;
+  text-transform: capitalize;
+  font-weight: bold;
+  position: relative;
+  font-size: 20px;
+}
+
+h2 {
+  -webkit-font-smoothing: none;
+  font-family: "pokemon-font", "Courier New", Courier, monospace;
+  text-transform: capitalize;
+  font-weight: bold;
+  position: relative;
+  font-size: 15px;
+  color: #666;
+}
+
+h3 {
+  -webkit-font-smoothing: none;
+  font-family: "pokemon-font", "Courier New", Courier, monospace;
+  text-transform: capitalize;
+  font-weight: bold;
+  position: relative;
+  font-size: 10px;
+  color: #191715;
+}
+
+:root {
+  --water: #6890F0;
+  --flying: #A890F0;
+  --ice: #98D8D8;
+  --normal: #A8A878;
+}
+
 #big-blue-light, #mini-red-light, #mini-yellow-light, #mini-green-light {
   width: 16px;
   height: 16px;
@@ -69,6 +110,7 @@ h3 {
   top: 15px;
   left: 15px;
   background: -webkit-radial-gradient(#1EFFF3, #07BDFF, #0090FF);
+  background: radial-gradient(#1EFFF3, #07BDFF, #0090FF);
   border-color: #9EE5FF;
   position: absolute;
 }
@@ -76,6 +118,7 @@ h3 {
 #mini-red-light {
   left: 95px;
   background: -webkit-radial-gradient(#FF3277, #ff568f);
+  background: radial-gradient(#FF3277, #ff568f);
   border-color: #ffe5ed;
   position: absolute;
 }
@@ -83,15 +126,24 @@ h3 {
 #mini-yellow-light {
   left: 121px;
   background: -webkit-radial-gradient(#FFD24C, #FFD968);
+  background: radial-gradient(#FFD24C, #FFD968);
   border-color: #fff8e5;
   position: absolute;
 }
 
 #mini-green-light {
   background: -webkit-radial-gradient(#2CFF19, #4dff3d);
-  left: 147px;
+  background: radial-gradient(#2CFF19, #4dff3d);
+  left: 146px;
   border-color: #d0ffcc;
   position: absolute;
+}
+
+:root {
+  --water: #6890F0;
+  --flying: #A890F0;
+  --ice: #98D8D8;
+  --normal: #A8A878;
 }
 
 #image-display-container {
@@ -127,6 +179,42 @@ h3 {
   position: absolute;
 }
 
+:root {
+  --water: #6890F0;
+  --flying: #A890F0;
+  --ice: #98D8D8;
+  --normal: #A8A878;
+}
+
+#info-display {
+  width: 320px;
+  height: 220px;
+  border-radius: 5px;
+  background-color: #EEE;
+  top: 50px;
+  left: 40px;
+  padding: 10px;
+  box-shadow: inset 1px 1px 10px #666, inset -1px -1px 10px #666;
+  position: absolute;
+}
+
+.stat-bar {
+  height: 10px;
+  background-color: #666;
+  margin: 2px 0px;
+}
+
+#hide-yo-stats {
+  display: none;
+}
+
+:root {
+  --water: #6890F0;
+  --flying: #A890F0;
+  --ice: #98D8D8;
+  --normal: #A8A878;
+}
+
 #name-display {
   width: 140px;
   height: 50px;
@@ -155,52 +243,6 @@ h3 {
   border-left: 35px solid #191715;
   top: 400px;
   left: 320px;
-}
-
-#separator {
-  width: 10px;
-  height: 300px;
-  border-radius: 1px;
-  background: -webkit-linear-gradient(left, #e41321 0%, #b50f1a 50%, #e41321 100%);
-  box-shadow: -1px 1px 0px #cc111e;
-  left: 393px;
-  top: 145px;
-  z-index: 3;
-  position: absolute;
-}
-
-#inside-flap {
-  width: 400px;
-  height: 450px;
-  border-radius: 20px;
-  background-color: #ED2331;
-  top: 71px;
-  left: 398px;
-  z-index: 1;
-  box-shadow: 0px 2px 1px #6e0910, inset -2px 2px 0px #f9b0b5;
-  position: absolute;
-}
-
-#info-display {
-  width: 320px;
-  height: 220px;
-  border-radius: 5px;
-  background-color: #EEE;
-  top: 50px;
-  left: 40px;
-  padding: 10px;
-  box-shadow: inset 1px 1px 10px #666, inset -1px -1px 10px #666;
-  position: absolute;
-}
-
-.stat-bar {
-  height: 10px;
-  background-color: #666;
-  margin: 2px 0px;
-}
-
-#hide-yo-stats {
-  display: none;
 }
 
 #stats-button {

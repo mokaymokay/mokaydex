@@ -1,0 +1,23 @@
+@import "colors";
+
+#info-display {
+	width: 320px;
+  height: 220px;
+	border-radius: $round-border / 4;
+	background-color: $lightgray;
+	top: 50px;
+	left: 40px;
+	padding: 10px;
+  @include engraved-effect;
+  position: absolute;
+}
+
+.stat-bar {
+	height: 10px;
+	background-color: $ashgray;
+	margin: 2px 0px;
+}
+
+#hide-yo-stats {
+	display: none;
+}
