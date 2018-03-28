@@ -68,6 +68,7 @@ function createPokemon(id) {
     type: "GET",
   }).done(function(data) {
       console.log("success!");
+      let id = data.id;
       let name = data.name;
       let defenseStat = data.stats[3].base_stat;
       let attackStat = data.stats[4].base_stat;
@@ -99,4 +100,13 @@ $( "#stats-button" ).click(function(){
   } else {
     $( "#hide-yo-stats" ).hide();
   }
+});
+
+$( "#add-form" ).on('submit', function(e) {
+  e.preventDefault();
+  let pokemon = $( "input[type=text]" ).val();
+  $('input[type="text"]').val("");
+  createPokemon(pokemon).done(function() {
+    newTrainer.show(newTrainer.pokedex.length - 1);
+  })
 });

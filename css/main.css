@@ -216,7 +216,7 @@ h3 {
   left: 320px;
 }
 
-#stats-button {
+#stats-button, #add-button {
   width: 120px;
   height: 34px;
   box-shadow: -2px 2px 1px #666, 2px -2px 0px #EEE;
@@ -239,5 +239,26 @@ h3 {
 
 #stats-button:active {
   background-color: #FFD24C;
+  transform: translateY(2px);
+}
+
+#add-form {
+  top: 350px;
+  left: 237px;
+  background: #FFF;
+  position: absolute;
+}
+
+#add-button {
+  border-radius: 5px;
+  background-color: #DDD;
+}
+
+#add-button:hover {
+  background-color: #666;
+}
+
+#add-button:active {
+  background-color: #666;
   transform: translateY(2px);
 }

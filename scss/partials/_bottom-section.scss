@@ -59,3 +59,23 @@ $bottom-right: 300px;
     transform: translateY(2px);
   }
 }
+
+#add-form {
+	top: $bottom-right + 50;
+	left: 237px;
+	background: $white;
+	position: absolute;
+}
+
+#add-button {
+	@extend %button;
+	border-radius: $round-border / 4;
+	background-color: $gray;
+	&:hover {
+		background-color: $ashgray;
+	}
+	&:active {
+		background-color: $ashgray;
+		transform: translateY(2px);
+	}
+}
