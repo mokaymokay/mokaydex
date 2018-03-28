@@ -1,6 +1,6 @@
 $font-size: 10px;
 
-@mixin pokefont {
+%pokefont {
   -webkit-font-smoothing: none;
   font-family: "pokemon-font", "Courier New", Courier, monospace;
   text-transform: capitalize;
@@ -9,18 +9,19 @@ $font-size: 10px;
 }
 
 h1 {
-  @include pokefont;
+  @extend %pokefont;
   font-size: $font-size * 2;
+  color: $white;
 }
 
 h2 {
-  @include pokefont;
+  @extend %pokefont;
   font-size: $font-size * 1.5;
   color: $ashgray;
 }
 
 h3 {
-  @include pokefont;
+  @extend %pokefont;
   font-size: $font-size;
   color: $jetblack;
 }

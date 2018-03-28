@@ -5,13 +5,6 @@
   --normal: #A8A878;
 }
 
-:root {
-  --water: #6890F0;
-  --flying: #A890F0;
-  --ice: #98D8D8;
-  --normal: #A8A878;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -57,40 +50,27 @@
   position: absolute;
 }
 
-h1 {
+h1, h2, h3 {
   -webkit-font-smoothing: none;
   font-family: "pokemon-font", "Courier New", Courier, monospace;
   text-transform: capitalize;
   font-weight: bold;
   position: relative;
+}
+
+h1 {
   font-size: 20px;
+  color: #FFF;
 }
 
 h2 {
-  -webkit-font-smoothing: none;
-  font-family: "pokemon-font", "Courier New", Courier, monospace;
-  text-transform: capitalize;
-  font-weight: bold;
-  position: relative;
   font-size: 15px;
   color: #666;
 }
 
 h3 {
-  -webkit-font-smoothing: none;
-  font-family: "pokemon-font", "Courier New", Courier, monospace;
-  text-transform: capitalize;
-  font-weight: bold;
-  position: relative;
   font-size: 10px;
   color: #191715;
-}
-
-:root {
-  --water: #6890F0;
-  --flying: #A890F0;
-  --ice: #98D8D8;
-  --normal: #A8A878;
 }
 
 #big-blue-light, #mini-red-light, #mini-yellow-light, #mini-green-light {
@@ -139,13 +119,6 @@ h3 {
   position: absolute;
 }
 
-:root {
-  --water: #6890F0;
-  --flying: #A890F0;
-  --ice: #98D8D8;
-  --normal: #A8A878;
-}
-
 #image-display-container {
   width: 360px;
   height: 260px;
@@ -179,13 +152,6 @@ h3 {
   position: absolute;
 }
 
-:root {
-  --water: #6890F0;
-  --flying: #A890F0;
-  --ice: #98D8D8;
-  --normal: #A8A878;
-}
-
 #info-display {
   width: 320px;
   height: 220px;
@@ -206,13 +172,6 @@ h3 {
 
 #hide-yo-stats {
   display: none;
-}
-
-:root {
-  --water: #6890F0;
-  --flying: #A890F0;
-  --ice: #98D8D8;
-  --normal: #A8A878;
 }
 
 #name-display {
