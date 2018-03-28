@@ -1,11 +1,11 @@
 @import "colors";
 
 $bottom-left: 400px;
-$bottom-right: 360px;
+$bottom-right: 300px;
 
 #name-display {
-	width: 140px;
-	height: 50px;
+	width: 175px;
+	height: 70px;
 	border-radius: $round-border / 4;;
 	background-color: $white;
   top: $bottom-left;
@@ -41,7 +41,7 @@ $bottom-right: 360px;
   box-shadow: -2px 2px 1px $ashgray, 2px -2px 0px $lightgray;
   color: $white;
   text-align: center;
-  padding: 8px 0px;
+  padding: 6px 0px;
   position: absolute;
 }
 
@@ -49,7 +49,7 @@ $bottom-right: 360px;
   @extend %button;
   border-radius: $round-border / 4;
   top: $bottom-right;
-  left: 240px;
+  left: 237px;
   background-color: $lightyellow;
   &:hover {
     background-color: $yellow;

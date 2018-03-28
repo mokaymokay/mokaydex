@@ -56,15 +56,18 @@ h1, h2, h3 {
   text-transform: capitalize;
   font-weight: bold;
   position: relative;
+  margin: 0;
+  padding: 0 0 1%;
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 18px;
   color: #FFF;
 }
 
 h2 {
-  font-size: 15px;
+  font-size: 13px;
+  line-height: 150%;
   color: #666;
 }
 
@@ -184,8 +187,8 @@ h3 {
 }
 
 #name-display {
-  width: 140px;
-  height: 50px;
+  width: 175px;
+  height: 70px;
   border-radius: 5px;
   background-color: #FFF;
   top: 400px;
@@ -219,14 +222,14 @@ h3 {
   box-shadow: -2px 2px 1px #666, 2px -2px 0px #EEE;
   color: #FFF;
   text-align: center;
-  padding: 8px 0px;
+  padding: 6px 0px;
   position: absolute;
 }
 
 #stats-button {
   border-radius: 5px;
-  top: 360px;
-  left: 240px;
+  top: 300px;
+  left: 237px;
   background-color: #FFD968;
 }
 
