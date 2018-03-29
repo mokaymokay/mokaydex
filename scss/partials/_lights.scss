@@ -21,9 +21,9 @@ $mini-light-size: 16px;
   border-width: 3px;
   top: $lights-position;
   left: $lights-position;
-  background: -webkit-radial-gradient(#1EFFF3, #07BDFF, #0090FF);
-  background: radial-gradient(#1EFFF3, #07BDFF, #0090FF);
-  border-color: #9EE5FF;
+  background: -webkit-radial-gradient($turquoise, $deepskyblue, $azure);
+  background: radial-gradient($turquoise, $deepskyblue, $azure);
+  border-color: lighten($turquoise, 30%);
   position: absolute;
 }
 

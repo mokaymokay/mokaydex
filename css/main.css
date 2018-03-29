@@ -94,7 +94,7 @@ h3 {
   left: 15px;
   background: -webkit-radial-gradient(#1EFFF3, #07BDFF, #0090FF);
   background: radial-gradient(#1EFFF3, #07BDFF, #0090FF);
-  border-color: #9EE5FF;
+  border-color: #b7fffb;
   position: absolute;
 }
 
@@ -234,31 +234,32 @@ h3 {
 }
 
 #stats-button:hover {
-  background-color: #FFD24C;
+  background-color: #ffcc35;
 }
 
 #stats-button:active {
-  background-color: #FFD24C;
+  background-color: #ffcc35;
   transform: translateY(2px);
 }
 
 #add-form {
   top: 350px;
-  left: 237px;
+  left: 100px;
   background: #FFF;
   position: absolute;
 }
 
 #add-button {
+  border: 0px;
   border-radius: 5px;
-  background-color: #DDD;
+  background-color: #53A2C6;
 }
 
 #add-button:hover {
-  background-color: #666;
+  background-color: #3989ad;
 }
 
 #add-button:active {
-  background-color: #666;
+  background-color: #3989ad;
   transform: translateY(2px);
 }

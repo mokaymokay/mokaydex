@@ -52,30 +52,31 @@ $bottom-right: 300px;
   left: 237px;
   background-color: $lightyellow;
   &:hover {
-    background-color: $yellow;
+    background-color: darken($lightyellow, 10%);
   }
   &:active {
-    background-color: $yellow;
+    background-color: darken($lightyellow, 10%);
     transform: translateY(2px);
   }
 }
 
 #add-form {
 	top: $bottom-right + 50;
-	left: 237px;
+	left: 100px;
 	background: $white;
 	position: absolute;
 }
 
 #add-button {
 	@extend %button;
+	border: 0px;
 	border-radius: $round-border / 4;
-	background-color: $gray;
+	background-color: $carolinablue;
 	&:hover {
-		background-color: $ashgray;
+		background-color: darken($carolinablue, 10%);
 	}
 	&:active {
-		background-color: $ashgray;
+		background-color: darken($carolinablue, 10%);
 		transform: translateY(2px);
 	}
 }

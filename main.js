@@ -94,19 +94,31 @@ $.when(createPokemon(130)
     newTrainer.show(0); // pass in 0 by default to show first pokemon
 });
 
-$( "#stats-button" ).click(function(){
+function toggleStats() {
   if ($( "#hide-yo-stats" ).css('display') == 'none') {
     $( "#hide-yo-stats" ).slideDown(800);
   } else {
     $( "#hide-yo-stats" ).hide();
   }
-});
+}
 
-$( "#add-form" ).on('submit', function(e) {
+$( "#stats-button" ).click(function() {
+  toggleStats();
+})
+
+// $( "#add-form" ).on('submit', function(e) {
+$( "#add-button" ).click(function(e) {
   e.preventDefault();
   let pokemon = $( "input[type=text]" ).val();
-  $('input[type="text"]').val("");
+  // hide current data and show preloader
+  $( "input[type='text']" ).val("");
+  $( "img, h2, #hide-yo-stats" ).hide();
+  $( "#image-display" ).css("background", "#FFF");
+  $( "#image-preloader" ).show();
   createPokemon(pokemon).done(function() {
+    // show current data and hide preloader
+    $( "#image-preloader" ).hide();
+    toggleStats();
     newTrainer.show(newTrainer.pokedex.length - 1);
   })
-});
+})
