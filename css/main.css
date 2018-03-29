@@ -259,7 +259,7 @@ h3 {
   left: 372.5px;
 }
 
-#stats-button, #add-button {
+#stats-button, #add-button, #show-button {
   width: 120px;
   height: 34px;
   box-shadow: -2px 2px 1px #666, 2px -2px 0px #EEE;
@@ -271,7 +271,7 @@ h3 {
 #stats-button {
   border-radius: 6.25px;
   top: 370px;
-  left: 336px;
+  left: 40px;
   background-color: #FFD968;
 }
 
@@ -284,19 +284,15 @@ h3 {
   transform: translateY(2px);
 }
 
-#add-form {
-  top: 489px;
-  left: 129px;
+#add-form, #show-form {
   background: #FFF;
   position: absolute;
   padding: 0 1%;
+  left: 198px;
 }
 
-#add-input-field {
-  width: 120px;
-  height: 34px;
-  border: none;
-  margin: 0 0 4px 0;
+#add-form {
+  top: 489px;
 }
 
 #add-button {
@@ -314,4 +310,36 @@ h3 {
 #add-button:active {
   background-color: #3989ad;
   transform: translateY(2px);
+}
+
+#add-input-field, #show-input-field {
+  width: 120px;
+  height: 34px;
+  border: none;
+  margin: 0 0 4px 0;
+}
+
+#show-form {
+  top: 432px;
+}
+
+#show-button {
+  top: 2px;
+  left: 138px;
+  border: 0px;
+  border-radius: 6.25px;
+  background-color: #83C653;
+}
+
+#show-button:hover {
+  background-color: #69ad39;
+}
+
+#show-button:active {
+  background-color: #69ad39;
+  transform: translateY(2px);
+}
+
+#add-button h1, #show-button h1 {
+  letter-spacing: 2px;
 }

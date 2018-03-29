@@ -11,12 +11,16 @@ class Trainer {
     return this.pokedex;
   }
 
-  get(pokemon) { // pass in pokemon name as a string
+  get(pokemon) { // takes in pokemon name as argument and returns index of pokemon in pokedex
     for (var i = 0; i < this.pokedex.length; i++) {
-      if (this.pokedex[i].name === pokemon) { return this.pokedex[i] }
+      if (this.pokedex[i].name === pokemon) {
+        return this.show(i);
+      }
     }
+    return "error";
   }
 
+  // i = index of pokemon in pokedex
   show(i) {
     let $pokeNameId = $(`<h2>${this.pokedex[i].name}</h2><h2>no: ${this.pokedex[i].id}</h2>`);
     $( "#name-display" ).html($pokeNameId);
@@ -101,7 +105,7 @@ $.when(createPokemon(130)
     createPokemon(143)
   ).done(function() {
     $("#image-preloader").hide()
-    newTrainer.show(0); // pass in 0 by default to show first pokemon
+    newTrainer.show(0); // pass in 0 by default to show first pokemon in pokedex
 });
 
 function toggleStats() {
@@ -118,9 +122,9 @@ $( "#stats-button" ).click(function() {
 
 $( "#add-button" ).click(function(e) {
   e.preventDefault();
-  let pokemon = $( "input[type=text]" ).val();
+  let pokemon = $( "#add-input-field" ).val();
   // hide current data and show preloader
-  $( "input[type='text']" ).val("");
+  $( "#add-input-field" ).val("");
   $( "img, h2, #hide-yo-stats" ).hide();
   $( "#image-display" ).css("background", "#FFF");
   $( "#image-preloader" ).show();
@@ -130,4 +134,14 @@ $( "#add-button" ).click(function(e) {
     toggleStats();
     newTrainer.show(newTrainer.pokedex.length - 1);
   })
+})
+
+$( "#show-button" ).click(function(e) {
+  e.preventDefault();
+  let pokemon = $( "#show-input-field" ).val().toLowerCase();
+  $( "#show-input-field" ).val("");
+  newTrainer.get(pokemon);
+  if ( newTrainer.get(pokemon) === "error") {
+    $( "#show-input-field" ).val("Not found");
+  }
 })

@@ -1,7 +1,7 @@
 @import "colors";
 
-$bottom-left: 516px;
-$bottom-right: 370px;
+$name-position: 516px; // from top
+$form-position: 489px; // from top
 $button-width: 120px;
 $button-height: 34px;
 $triangle-width: 30px;
@@ -10,7 +10,7 @@ $triangle-width: 30px;
   border-top: $triangle-width solid transparent;
   border-bottom: $triangle-width solid transparent;
   position: absolute;
-	top: $bottom-left + 6;
+	top: $name-position + 6;
 }
 
 #left-arrow {
@@ -24,7 +24,7 @@ $triangle-width: 30px;
 	height: 70px;
 	border-radius: $round-border / 4;;
 	background-color: $white;
-  top: $bottom-left;
+  top: $name-position;
 	left: 162.5px;
 	padding: 10px 15px;
   @include engraved-effect;
@@ -49,8 +49,8 @@ $triangle-width: 30px;
 #stats-button {
   @extend %button;
   border-radius: $round-border / 4;
-  top: $bottom-right;
-  left: 336px;
+  top: 370px;
+  left: 40px;
   background-color: $lightyellow;
   &:hover {
     background-color: darken($lightyellow, 10%);
@@ -61,19 +61,16 @@ $triangle-width: 30px;
   }
 }
 
-#add-form {
-	top: 489px;
-	left: 129px;
+%form {
 	background: $white;
 	position: absolute;
 	padding: 0 1%;
+  left: 198px;
 }
 
-#add-input-field {
-	width: $button-width;
-	height: $button-height;
-	border: none;
-	margin: 0 0 4px 0;
+#add-form {
+  @extend %form;
+  top: $form-position;
 }
 
 #add-button {
@@ -90,4 +87,36 @@ $triangle-width: 30px;
 		background-color: darken($carolinablue, 10%);
 		transform: translateY(2px);
 	}
+}
+
+#add-input-field, #show-input-field {
+	width: $button-width;
+	height: $button-height;
+	border: none;
+	margin: 0 0 4px 0;
+}
+
+#show-form {
+  @extend %form;
+  top: $form-position - 57;
+}
+
+#show-button {
+	@extend %button;
+	top: 2px;
+	left: 138px;
+	border: 0px;
+	border-radius: $round-border / 4;
+	background-color: $mantisgreen;
+	&:hover {
+		background-color: darken($mantisgreen, 10%);
+	}
+	&:active {
+		background-color: darken($mantisgreen, 10%);
+		transform: translateY(2px);
+	}
+}
+
+#add-button h1, #show-button h1 {
+  letter-spacing: 2px;
 }
