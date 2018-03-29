@@ -67,6 +67,10 @@ $bottom-right: 300px;
 	position: absolute;
 }
 
+input {
+
+}
+
 #add-button {
 	@extend %button;
 	border: 0px;

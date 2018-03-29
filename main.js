@@ -79,7 +79,11 @@ function createPokemon(id) {
       let myPokemon = new Pokemon(id, name, defenseStat, attackStat, hpStat, abilities, type, image);
       newTrainer.pokedex.push(myPokemon);
   }).fail(function() {
-      alert("404 not found");
+      if (newTrainer) {
+        newTrainer.show(0);
+      } else {
+        alert("404 not found");
+      }
   });
 }
 
@@ -106,7 +110,6 @@ $( "#stats-button" ).click(function() {
   toggleStats();
 })
 
-// $( "#add-form" ).on('submit', function(e) {
 $( "#add-button" ).click(function(e) {
   e.preventDefault();
   let pokemon = $( "input[type=text]" ).val();
