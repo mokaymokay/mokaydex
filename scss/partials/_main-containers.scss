@@ -47,15 +47,21 @@ $left-margin: 20px;
   z-index: 1;
   box-shadow: -1px 5px 0px darken($pokered, 30%), inset -4px 4px 0px lighten($pokered, 30%);
   position: absolute;
-	// fix bottom box-shadow being cut off in mobile
-	padding-bottom: 10px;
-	overflow: visible;
+}
+
+#spacing {
+	width: $top-margin;
+	height: $left-margin;
+	top: 650px + 560px;
+	left: 0;
+	position: absolute;
 }
 
 @media screen and (max-width: 600px) {
 
 	#pokedex {
-		margin: auto;
+		top: $top-margin / 2;
+	  left: $left-margin / 2;
 	}
 
 	#inside-flap {
@@ -65,6 +71,12 @@ $left-margin: 20px;
 	}
 
 	#separator {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	#spacing {
 		display: none;
 	}
 }

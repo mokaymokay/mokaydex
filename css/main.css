@@ -62,13 +62,20 @@
   z-index: 1;
   box-shadow: -1px 5px 0px #6e0910, inset -4px 4px 0px #f9b0b5;
   position: absolute;
-  padding-bottom: 10px;
-  overflow: visible;
+}
+
+#spacing {
+  width: 20px;
+  height: 20px;
+  top: 1210px;
+  left: 0;
+  position: absolute;
 }
 
 @media screen and (max-width: 600px) {
   #pokedex {
-    margin: auto;
+    top: 10px;
+    left: 10px;
   }
   #inside-flap {
     top: 655px;
@@ -76,6 +83,12 @@
     box-shadow: -6px 5px 0px #6e0910, inset -4px 4px 0px #f9b0b5;
   }
   #separator {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #spacing {
     display: none;
   }
 }
