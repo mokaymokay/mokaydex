@@ -257,13 +257,24 @@ h3 {
 }
 
 #add-form {
-  top: 350px;
-  left: 100px;
+  top: 390px;
+  left: 80px;
   background: #FFF;
   position: absolute;
+  padding: 0 1%;
+}
+
+#add-input-field {
+  width: 120px;
+  height: 34px;
+  text-align: center;
+  border: none;
+  margin: 0 0 4px 0;
 }
 
 #add-button {
+  top: 2px;
+  left: 138px;
   border: 0px;
   border-radius: 5px;
   background-color: #53A2C6;
