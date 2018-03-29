@@ -1,5 +1,3 @@
-$font-size: 10px;
-
 %pokefont {
   -webkit-font-smoothing: none;
   font-family: "pokemon-font", "Courier New", Courier, monospace;
@@ -8,24 +6,25 @@ $font-size: 10px;
   position: relative;
   // override materialize
   margin: 0;
-  padding: 0 0 1%;
+  padding: 0;
 }
 
 h1 {
   @extend %pokefont;
-  font-size: $font-size * 1.8;
+  font-size: 18px;
   color: $white;
+  text-align: center;
 }
 
 h2 {
   @extend %pokefont;
-  font-size: $font-size * 1.3;
+  font-size: 16px;
   line-height: 150%;
   color: $ashgray;
 }
 
 h3 {
   @extend %pokefont;
-  font-size: $font-size;
+  font-size: 12px;
   color: $jetblack;
 }

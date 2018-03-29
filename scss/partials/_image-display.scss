@@ -1,11 +1,12 @@
 @import "colors";
 @import "mixins";
 
-$container-width: 360px;
-$container-height: 260px;
-$image-size: 96px;
+$container-width: 444px;
+$container-height: 325px;
+$image-size: 160px;
 
 #image-preloader {
+  position: absolute;
   @include center;
 }
 
@@ -14,19 +15,19 @@ $image-size: 96px;
   height: $container-height;
   border-radius: $round-border;
   background-color: $gray;
-  top: 91px;
-  left: 20px;
+  top: 125px;
+  left: 25px;
   box-shadow: -2px 2px 1px $ashgray, 2px -2px 0px lighten($ashgray, 50%);
   position: absolute;
 }
 
 #image-display {
-  width: $container-width - 40;
-  height: $container-height - 40;
+  width: $container-width - 50;
+  height: $container-height - 50;
   border-radius: $round-border / 4;
   background: $white;
-  top: 20px;
-  left: 20px;
+  top: 25px;
+  left: 25px;
   @include engraved-effect;
   position: absolute;
 }
@@ -35,4 +36,5 @@ $image-size: 96px;
   width: $image-size;
   height: $image-size;
   @include center;
+  position: absolute;
 }

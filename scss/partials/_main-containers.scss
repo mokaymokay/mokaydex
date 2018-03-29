@@ -1,6 +1,8 @@
 @import "colors";
 
-$round-border: 20px;
+$round-border: 25px;
+$top-margin: 20px;
+$left-margin: 20px;
 
 * {
 	margin: 0;
@@ -8,41 +10,41 @@ $round-border: 20px;
 }
 
 #pokedex {
-  top: 20px;
-  left: 20px;
+  top: $top-margin;
+  left: $left-margin;
   position: absolute;
 }
 
 #main-body {
-  width: 400px;
-  height: 520px;
+  width: 500px;
+  height: 650px;
   border-radius: 20px;
   background-color: $pokered;
   z-index: 1;
-  box-shadow: -2px 2px 1px darken($pokered, 30%), inset -2px 2px 0px lighten($pokered, 30%);
+  box-shadow: -6px 5px 0px darken($pokered, 30%), inset -4px 4px 0px lighten($pokered, 30%);
   position: absolute;
 }
 
 #separator {
-  width: 10px;
+  width: 14px;
   height: 300px;
   border-radius: 1px;
-  background: -webkit-linear-gradient(left, darken($pokered, 5%) 0%, darken($pokered, 15%) 50%, darken($pokered, 5%) 100%);
+  background: -webkit-linear-gradient(left, darken($pokered, 10%) 0%, darken($pokered, 25%) 50%, darken($pokered, 10%) 100%);
   box-shadow: -1px 1px 0px darken($pokered, 10%);
-  left: 393px;
-  top: 145px;
+	top: $top-margin + 70 + 120;
+	left: $left-margin + 480 - 11;
   z-index: 3;
   position: absolute;
 }
 
 #inside-flap {
-  width: 400px;
-  height: 450px;
+  width: 500px;
+  height: 560px;
   border-radius: $round-border;
   background-color: $pokered;
-  top: 71px;
-  left: 398px;
+  top: $top-margin + 70;
+  left: $left-margin +  480 - 4;
   z-index: 1;
-  box-shadow: 0px 2px 1px darken($pokered, 30%), inset -2px 2px 0px lighten($pokered, 30%);
+  box-shadow: -1px 5px 0px darken($pokered, 30%), inset -4px 4px 0px lighten($pokered, 30%);
   position: absolute;
 }

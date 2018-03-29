@@ -1,9 +1,23 @@
 @import "colors";
 
-$bottom-left: 400px;
-$bottom-right: 300px;
+$bottom-left: 516px;
+$bottom-right: 370px;
 $button-width: 120px;
 $button-height: 34px;
+$triangle-width: 30px;
+
+%arrow {
+  border-top: $triangle-width solid transparent;
+  border-bottom: $triangle-width solid transparent;
+  position: absolute;
+	top: $bottom-left + 6;
+}
+
+#left-arrow {
+  @extend %arrow;
+  border-right: $triangle-width solid $darkgray;
+	left: 162.5px - 64.5;
+}
 
 #name-display {
 	width: 175px;
@@ -11,30 +25,16 @@ $button-height: 34px;
 	border-radius: $round-border / 4;;
 	background-color: $white;
   top: $bottom-left;
-	left: 40px;
-	padding: 15px 15px;
+	left: 162.5px;
+	padding: 10px 15px;
   @include engraved-effect;
   position: absolute;
 }
 
-%arrow {
-  border-top: 35px solid transparent;
-  border-bottom: 35px solid transparent;
-  position: absolute;
-}
-
-#left-arrow {
-  @extend %arrow;
-  border-right: 35px solid $jetblack;
-	top: $bottom-left;
-	left: 250px;
-}
-
 #right-arrow {
   @extend %arrow;
-  border-left: 35px solid $jetblack;
-	top: $bottom-left;
-  left: 320px;
+  border-left: $triangle-width solid $darkgray;
+  left: 162.5px + 210;
 }
 
 %button {
@@ -42,7 +42,6 @@ $button-height: 34px;
   height: $button-height;
   box-shadow: -2px 2px 1px $ashgray, 2px -2px 0px $lightgray;
   color: $white;
-  text-align: center;
   padding: 6px 0px;
   position: absolute;
 }
@@ -51,7 +50,7 @@ $button-height: 34px;
   @extend %button;
   border-radius: $round-border / 4;
   top: $bottom-right;
-  left: 237px;
+  left: 336px;
   background-color: $lightyellow;
   &:hover {
     background-color: darken($lightyellow, 10%);
@@ -63,8 +62,8 @@ $button-height: 34px;
 }
 
 #add-form {
-	top: $bottom-right + 90;
-	left: 80px;
+	top: 489px;
+	left: 129px;
 	background: $white;
 	position: absolute;
 	padding: 0 1%;
@@ -73,7 +72,6 @@ $button-height: 34px;
 #add-input-field {
 	width: $button-width;
 	height: $button-height;
-	text-align: center;
 	border: none;
 	margin: 0 0 4px 0;
 }

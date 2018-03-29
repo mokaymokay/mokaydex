@@ -1,8 +1,8 @@
 @import "colors";
 
 #info-display {
-	width: 320px;
-  height: 220px;
+	width: 444px - 25;
+  height: 325px - 25;
 	border-radius: $round-border / 4;
 	background-color: $lightgray;
 	top: 50px;
