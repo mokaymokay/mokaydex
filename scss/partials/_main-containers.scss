@@ -47,4 +47,24 @@ $left-margin: 20px;
   z-index: 1;
   box-shadow: -1px 5px 0px darken($pokered, 30%), inset -4px 4px 0px lighten($pokered, 30%);
   position: absolute;
+	// fix bottom box-shadow being cut off in mobile
+	padding-bottom: 10px;
+	overflow: visible;
+}
+
+@media screen and (max-width: 600px) {
+
+	#pokedex {
+		margin: auto;
+	}
+
+	#inside-flap {
+		top: 650px + 5px;
+		left: 0;
+		box-shadow: -6px 5px 0px darken($pokered, 30%), inset -4px 4px 0px lighten($pokered, 30%);
+	}
+
+	#separator {
+		display: none;
+	}
 }
