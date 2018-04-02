@@ -16,16 +16,16 @@ $triangle-width: 30px;
 #left-arrow {
   @extend %arrow;
   border-right: $triangle-width solid $darkgray;
-	left: 162.5px - 64.5;
+	left: 149.5px - 64.5;
 }
 
 #name-display {
-	width: 175px;
+	width: 200px;
 	height: 70px;
 	border-radius: $round-border / 4;;
 	background-color: $white;
   top: $name-position;
-	left: 162.5px;
+	left: 149.5px;
 	padding: 10px 15px;
   @include engraved-effect;
   position: absolute;
@@ -34,7 +34,7 @@ $triangle-width: 30px;
 #right-arrow {
   @extend %arrow;
   border-left: $triangle-width solid $darkgray;
-  left: 162.5px + 210;
+  left: 149.5px + 235;
 }
 
 %button {

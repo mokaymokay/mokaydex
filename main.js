@@ -122,7 +122,7 @@ $( "#stats-button" ).click(function() {
 
 $( "#add-button" ).click(function(e) {
   e.preventDefault();
-  let pokemon = $( "#add-input-field" ).val();
+  let pokemon = $( "#add-input-field" ).val().toLowerCase();
   // hide current data and show preloader
   $( "#add-input-field" ).val("");
   $( "img, h2, #hide-yo-stats" ).hide();

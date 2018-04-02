@@ -218,6 +218,7 @@ h3 {
   padding: 10px;
   box-shadow: inset 1px 1px 10px #666, inset -1px -1px 10px #666;
   position: absolute;
+  overflow: hidden;
 }
 
 .stat-bar {
@@ -239,16 +240,16 @@ h3 {
 
 #left-arrow {
   border-right: 30px solid #333;
-  left: 98px;
+  left: 85px;
 }
 
 #name-display {
-  width: 175px;
+  width: 200px;
   height: 70px;
   border-radius: 6.25px;
   background-color: #FFF;
   top: 516px;
-  left: 162.5px;
+  left: 149.5px;
   padding: 10px 15px;
   box-shadow: inset 1px 1px 10px #666, inset -1px -1px 10px #666;
   position: absolute;
@@ -256,7 +257,7 @@ h3 {
 
 #right-arrow {
   border-left: 30px solid #333;
-  left: 372.5px;
+  left: 384.5px;
 }
 
 #stats-button, #add-button, #show-button {
