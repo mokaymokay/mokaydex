@@ -27,7 +27,7 @@
 #pokedex {
   top: 20px;
   left: 20px;
-  position: absolute;
+  margin: 0 auto;
 }
 
 #main-body {

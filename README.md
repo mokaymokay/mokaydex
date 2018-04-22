@@ -3,21 +3,21 @@
 
 ## Utilizes:
 * Pokémon API
-* jQuery
 * AJAX
+* jQuery
 * Materialize
 * SASS
 
 Desktop view:
-![desktop demo](demo-lapras.png)
+![desktop demo](github/demo-lapras.png)
 
 Mobile view:
-![mobile demo](mobile-demo-snorlax.png)
+![mobile demo](github/mobile-demo-snorlax.png)
 
 ## Features:
+* "Add" button that generates a new Pokémon by making an AJAX call to the API
 * "Stats" button that toggles showing additional info
 * "Show" button that retrieves a Pokémon from the Pokédex by name
-* "Add" button that generates a new Pokémon by making an AJAX call to the API
 * Materialize Preloader that improves the UX while AJAX calls are being made
 * Image container background color(s) that change with different Pokémon type(s)
 * Horizontal bar graph in which each width is dependent on its corresponding stat value
