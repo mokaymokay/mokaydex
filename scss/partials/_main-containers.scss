@@ -1,19 +1,6 @@
 @import "colors";
 
 $round-border: 25px;
-$top-margin: 20px;
-$left-margin: 20px;
-
-* {
-	margin: 0;
-	padding: 0;
-}
-
-#pokedex {
-  top: $top-margin;
-  left: $left-margin;
-  position: absolute;
-}
 
 #main-body {
   width: 500px;
@@ -31,10 +18,10 @@ $left-margin: 20px;
   border-radius: 1px;
   background: -webkit-linear-gradient(left, darken($pokered, 10%) 0%, darken($pokered, 25%) 50%, darken($pokered, 10%) 100%);
   box-shadow: -1px 1px 0px darken($pokered, 10%);
-	top: $top-margin + 70 + 120;
-	left: $left-margin + 480 - 11;
+	top: 210px;
+	left: 489px;
   z-index: 3;
-  position: absolute;
+  position: relative;
 }
 
 #inside-flap {
@@ -42,30 +29,25 @@ $left-margin: 20px;
   height: 560px;
   border-radius: $round-border;
   background-color: $pokered;
-  top: $top-margin + 70;
-  left: $left-margin +  480 - 4;
+  top: -210px;
+  left: 496px;
   z-index: 1;
   box-shadow: -1px 5px 0px darken($pokered, 30%), inset -4px 4px 0px lighten($pokered, 30%);
-  position: absolute;
+  position: relative;
 }
 
 #spacing {
-	width: $top-margin;
-	height: $left-margin;
-	top: 650px + 560px;
+	width: 20px;
+	height: 20px;
+	top: 1210px;
 	left: 0;
 	position: absolute;
 }
 
 @media screen and (max-width: 600px) {
 
-	#pokedex {
-		top: $top-margin / 2;
-	  left: $left-margin / 2;
-	}
-
 	#inside-flap {
-		top: 650px + 5px;
+		top: 655px;
 		left: 0;
 		box-shadow: -6px 5px 0px darken($pokered, 30%), inset -4px 4px 0px lighten($pokered, 30%);
 	}

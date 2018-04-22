@@ -19,17 +19,6 @@
   --fairy: #EE99AC;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-#pokedex {
-  top: 20px;
-  left: 20px;
-  margin: 0 auto;
-}
-
 #main-body {
   width: 500px;
   height: 650px;
@@ -49,7 +38,7 @@
   top: 210px;
   left: 489px;
   z-index: 3;
-  position: absolute;
+  position: relative;
 }
 
 #inside-flap {
@@ -57,11 +46,11 @@
   height: 560px;
   border-radius: 25px;
   background-color: #ED2331;
-  top: 90px;
+  top: -210px;
   left: 496px;
   z-index: 1;
   box-shadow: -1px 5px 0px #6e0910, inset -4px 4px 0px #f9b0b5;
-  position: absolute;
+  position: relative;
 }
 
 #spacing {
@@ -73,10 +62,6 @@
 }
 
 @media screen and (max-width: 600px) {
-  #pokedex {
-    top: 10px;
-    left: 10px;
-  }
   #inside-flap {
     top: 655px;
     left: 0;
@@ -107,11 +92,12 @@ h1 {
   font-size: 18px;
   color: #FFF;
   text-align: center;
+  padding-bottom: 1vh;
 }
 
 h2 {
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5em;
   color: #666;
 }
 

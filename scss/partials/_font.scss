@@ -14,12 +14,13 @@ h1 {
   font-size: 18px;
   color: $white;
   text-align: center;
+  padding-bottom: 1vh;
 }
 
 h2 {
   @extend %pokefont;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5em;
   color: $ashgray;
 }
 
