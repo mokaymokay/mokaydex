@@ -6,7 +6,7 @@
 * AJAX
 * jQuery
 * Materialize
-* SASS
+* Sass
 
 Desktop view:
 ![desktop demo](github/demo-lapras.png)
