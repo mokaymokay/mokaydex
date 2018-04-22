@@ -69,7 +69,7 @@ class Pokemon {
   }
 }
 
-function createPokemon(id) {
+let createPokemon = (id) => {
   return $.ajax({
     url: POKEMON_URL + id,
     dataType: 'json',
@@ -89,15 +89,12 @@ function createPokemon(id) {
       let myPokemon = new Pokemon(id, name, height, weight, defenseStat, attackStat, hpStat, abilities, type, image);
       newTrainer.pokedex.push(myPokemon);
   }).fail(function() {
-      if (newTrainer) {
-        newTrainer.show(0);
-      } else {
-        alert("404 not found");
-      }
+      if (newTrainer) { newTrainer.show(0) }
+      alert("We can't find that Pokemon!");
   });
 }
 
-let newTrainer = new Trainer("mokaymon");
+let newTrainer = new Trainer("mokaymokay");
 $.when(createPokemon(130)
   ).done(
     createPokemon(131)
@@ -108,7 +105,7 @@ $.when(createPokemon(130)
     newTrainer.show(0); // pass in 0 by default to show first pokemon in pokedex
 });
 
-function toggleStats() {
+let toggleStats = () => {
   if ($( "#hide-yo-stats" ).css('display') == 'none') {
     $( "#hide-yo-stats" ).slideDown(800);
   } else {
@@ -123,25 +120,34 @@ $( "#stats-button" ).click(function() {
 $( "#add-button" ).click(function(e) {
   e.preventDefault();
   let pokemon = $( "#add-input-field" ).val().toLowerCase();
-  // hide current data and show preloader
-  $( "#add-input-field" ).val("");
-  $( "img, h2, #hide-yo-stats" ).hide();
-  $( "#image-display" ).css("background", "#FFF");
-  $( "#image-preloader" ).show();
-  createPokemon(pokemon).done(function() {
-    // show current data and hide preloader
+  if (pokemon == "") {
+    alert("Please enter a valid ID or name!");
+  } else {
+    // hide current data and show preloader
+    $( "#add-input-field" ).val("");
+    $( "img, h2, #hide-yo-stats" ).hide();
+    $( "#image-display" ).css("background", "#FFF");
+    $( "#image-preloader" ).show();
+    createPokemon(pokemon).done(function() {
+      // show current data and hide preloader
+      $( "#image-preloader" ).hide();
+      toggleStats();
+      newTrainer.show(newTrainer.pokedex.length - 1);
+    })
     $( "#image-preloader" ).hide();
-    toggleStats();
-    newTrainer.show(newTrainer.pokedex.length - 1);
-  })
+  }
 })
 
 $( "#show-button" ).click(function(e) {
   e.preventDefault();
   let pokemon = $( "#show-input-field" ).val().toLowerCase();
-  $( "#show-input-field" ).val("");
-  newTrainer.get(pokemon);
-  if ( newTrainer.get(pokemon) === "error") {
-    $( "#show-input-field" ).val("Not found");
+  if (pokemon == "") {
+    alert("Please enter a valid name!");
+  } else {
+    $( "#show-input-field" ).val("");
+    newTrainer.get(pokemon);
+    if ( newTrainer.get(pokemon) === "error") {
+      $( "#show-input-field" ).val("Not found");
+    }
   }
 })
